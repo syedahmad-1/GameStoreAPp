@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.gamehokassignment.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_tournamentDetailsFragment"
+            app:destination="@id/tournamentDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tournamentsFragment"
+        android:name="com.example.gamehokassignment.ui.TournamentsFragment"
+        android:label="fragment_tournaments"
+        tools:layout="@layout/fragment_tournaments" />
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.example.gamehokassignment.ui.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group" />
+    <fragment
+        android:id="@+id/streamFragment"
+        android:name="com.example.gamehokassignment.ui.StreamFragment"
+        android:label="fragment_stream"
+        tools:layout="@layout/fragment_stream" />
+    <fragment
+        android:id="@+id/tournamentDetailsFragment"
+        android:name="com.example.gamehokassignment.ui.TournamentDetailsFragment"
+        android:label="fragment_tournament_details"
+        tools:layout="@layout/fragment_tournament_details" />
+    <fragment
+        android:id="@+id/overviewFragment"
+        android:name="com.example.gamehokassignment.ui.OverviewFragment"
+        android:label="fragment_overview"
+        tools:layout="@layout/fragment_overview" />
+    <fragment
+        android:id="@+id/playersFragment"
+        android:name="com.example.gamehokassignment.ui.PlayersFragment"
+        android:label="fragment_players"
+        tools:layout="@layout/fragment_players" />
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.gamehokassignment.ui.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/standingsFragment"
+        android:name="com.example.gamehokassignment.ui.StandingsFragment"
+        android:label="fragment_standings"
+        tools:layout="@layout/fragment_standings" />
+</navigation>

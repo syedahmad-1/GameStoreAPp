@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="240dp"
+    android:layout_height="300dp"
+    android:layout_marginStart="16dp"
+    app:cardBackgroundColor="@color/green">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/game_background_iv"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_121"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/registrationStatusCv"
+            app:layout_constraintTop_toTopOf="@id/game_background_iv"
+            app:layout_constraintStart_toStartOf="@id/game_background_iv"
+            app:cardBackgroundColor="#B3021F0F"
+            app:strokeWidth="0dp"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:paddingVertical="4dp"
+                android:paddingHorizontal="8dp"
+                android:id="@+id/registrationStatusTv"
+                android:text="Registration Open"
+                android:textSize="9sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            app:layout_constraintTop_toTopOf="@id/registrationStatusCv"
+            app:layout_constraintBottom_toBottomOf="@id/registrationStatusCv"
+            app:layout_constraintEnd_toEndOf="@id/game_background_iv"
+            app:cardBackgroundColor="#B3021F0F"
+            app:strokeWidth="0dp"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingHorizontal="5dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/cupIc"
+                    android:src="@drawable/ic_tournaments"
+                    app:tint="#1F8F52"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"/>
+                <TextView
+                    android:paddingVertical="4dp"
+                    android:paddingHorizontal="4dp"
+                    android:id="@+id/coinsAmountTv"
+                    android:text="10000"
+                    android:textSize="9sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/coinsIc"
+                    android:src="@drawable/ic_coin"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tournamentTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/example_tournament_title"
+            android:textColor="@color/textgrey"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/game_background_iv" />
+
+        <ImageView
+            android:id="@+id/dateIc"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_date"
+            app:layout_constraintStart_toStartOf="@id/tournamentTitleTv"
+            app:layout_constraintTop_toBottomOf="@id/tournamentTitleTv" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/jun_26_jun_27_2024"
+            android:textColor="@color/textgrey"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/dateIc"
+            app:layout_constraintStart_toEndOf="@id/dateIc"
+            app:layout_constraintTop_toTopOf="@id/dateIc" />
+
+
+        <TextView
+            android:id="@+id/entryTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/example_entry"
+            android:textColor="@color/textgrey"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/dateIc"
+            app:layout_constraintTop_toBottomOf="@id/dateIc" />
+
+        <ImageView
+            android:id="@+id/coinIc"
+            android:layout_width="13sp"
+            android:layout_height="13sp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/entryTv"
+            app:layout_constraintStart_toEndOf="@+id/entryTv"
+            app:layout_constraintTop_toTopOf="@+id/entryTv"
+            app:srcCompat="@drawable/ic_coin" />
+
+        <ImageView
+            android:id="@+id/groupIc"
+            android:layout_width="13sp"
+            android:layout_height="13sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/entryTv"
+            app:layout_constraintEnd_toStartOf="@+id/teamSizeTv"
+            app:layout_constraintTop_toTopOf="@+id/entryTv"
+            app:srcCompat="@drawable/ic_group"
+            app:tint="@color/textgrey" />
+
+        <TextView
+            android:id="@+id/teamSizeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/example_team_size"
+            android:textColor="@color/textgrey"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/entryTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/entryTv" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/teamSizeTv">
+
+            <TextView
+                android:id="@+id/tournamentsDetailsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/see_tournament_details"
+                android:textColor="@color/textgrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_arrow_up_bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

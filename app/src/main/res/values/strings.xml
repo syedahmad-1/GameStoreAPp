@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">GameHok Assignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_2456">2456</string>
+    <string name="compete_in_battles">Compete in Battles</string>
+    <string name="view_all">View All</string>
+    <string name="play_tournament_by_games">Play Tournament by Games</string>
+    <string name="people_to_follow">People to follow</string>
+    <string name="view_more">View More</string>
+    <string name="example_game_name">Call of Duty</string>
+    <string name="example_tournament_title">PUBG tournament By Red Bull</string>
+    <string name="jun_26_jun_27_2024">Jun 26 - Jun 27, 2024</string>
+    <string name="example_entry">Entry - 10</string>
+    <string name="example_team_size">670/800</string>
+    <string name="see_tournament_details">See Tournament Details</string>
+    <string name="example_user_name">Legend Gamer</string>
+    <string name="follow">Follow</string>
+    <string name="_670_800">670/800</string>
+    <string name="registration_closes_in_2d_15h_10m">Registration Closes in 2d 15h 10m</string>
+    <string name="pubg_tournament">PUBG Tournament</string>
+    <string name="tournament_starts">TOURNAMENT STARTS</string>
+    <string name="rounds">Rounds</string>
+    <string name="when_eliminated_return_to_the_match_room_page_to_be_ready_to_join_the_next_map_in_the_round">• When eliminated return to the match room page to be ready to join the next map in the round.</string>
+    <string name="gamehok_esports">Gamehok Esports</string>
+    <string name="this_is_the_in_house_organiser_of_this_platform_you_can_follow_our_page_on_this_platform_for_regular_updates">This is the in house organiser of this platform you can follow our page on this platform for regular updates</string>
+    <string name="_9890987754">9890987754</string>
+    <string name="more_tournaments_for_you">More tournaments for you</string>
+</resources>

@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".ui.OverviewFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/detailsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Details"
+            android:textColor="@color/textgrey"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_team"
+            app:layout_constraintStart_toStartOf="@+id/detailsTv"
+            app:layout_constraintTop_toBottomOf="@+id/detailsTv" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="TEAM SIZE"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/teamSizeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solo"
+            android:textColor="@color/white"
+
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <ImageView
+            android:id="@+id/formatIc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_tournament_format"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="FORMAT"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/formatIc"
+            app:layout_constraintTop_toTopOf="@+id/formatIc" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Single Elimination"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_date"
+            app:layout_constraintStart_toStartOf="@+id/formatIc"
+            app:layout_constraintTop_toBottomOf="@+id/formatIc" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/tournament_starts"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+
+        <TextView
+            android:id="@+id/tournamentsDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tue 24th Jan 2024, 01:00 PM"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_check_in"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="CHECK-IN"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+        <TextView
+            android:id="@+id/checkinTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 mins before the match starts"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/tournamentCv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardElevation="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkinTv"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/green3"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_green_background"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:id="@+id/tournamentHeadingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Tournament Prize"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/totalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="2000"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@id/weirdIconTotalIc"
+                        app:layout_constraintEnd_toStartOf="@id/weirdIconTotalIc"
+                        app:layout_constraintTop_toTopOf="@id/weirdIconTotalIc" />
+
+                    <ImageView
+                        android:id="@+id/weirdIconTotalIc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/group_1208"
+                        app:layout_constraintBottom_toBottomOf="@id/totalPrice"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/totalPrice" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#1A001208"
+                    android:fadingEdgeLength="15dp"
+                    android:padding="8dp">
+
+
+                    <TextView
+                        android:id="@+id/firstPrizeHeadingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="1st Prize"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/trophyIc1"
+                        app:layout_constraintStart_toEndOf="@id/trophyIc1"
+                        app:layout_constraintTop_toTopOf="@id/trophyIc1" />
+
+                    <TextView
+                        android:id="@+id/firstPrizePriceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="1000"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@id/weirdIconFirstPrizeIc"
+                        app:layout_constraintEnd_toStartOf="@id/weirdIconFirstPrizeIc"
+                        app:layout_constraintTop_toTopOf="@id/weirdIconFirstPrizeIc" />
+
+                    <ImageView
+                        android:id="@+id/weirdIconFirstPrizeIc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/group_1208"
+                        app:layout_constraintBottom_toBottomOf="@id/firstPrizeHeadingTv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/firstPrizeHeadingTv" />
+
+                    <ImageView
+                        android:id="@+id/trophyIc1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_trophy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/trophyIc2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_trophy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/secondPrizeHeadingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="2nd Prize"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/trophyIc2"
+                        app:layout_constraintStart_toEndOf="@id/trophyIc2"
+                        app:layout_constraintTop_toTopOf="@id/trophyIc2" />
+
+                    <TextView
+                        android:id="@+id/secondPrizePriceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="500"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@id/weirdIconSecondPrizeIc"
+                        app:layout_constraintEnd_toStartOf="@id/weirdIconSecondPrizeIc"
+                        app:layout_constraintTop_toTopOf="@id/weirdIconSecondPrizeIc" />
+
+                    <ImageView
+                        android:id="@+id/weirdIconSecondPrizeIc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/group_1208"
+                        app:layout_constraintBottom_toBottomOf="@id/secondPrizeHeadingTv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/secondPrizeHeadingTv" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/trophyIc3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_trophy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/thirdPrizeHeadingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="3rd Prize"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/trophyIc3"
+                        app:layout_constraintStart_toEndOf="@id/trophyIc3"
+                        app:layout_constraintTop_toTopOf="@id/trophyIc3" />
+
+                    <ImageView
+                        android:id="@+id/weirdIconThirdPrizeIc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/group_1208"
+                        app:layout_constraintBottom_toBottomOf="@id/thirdPrizeHeadingTv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/thirdPrizeHeadingTv" />
+
+                    <TextView
+                        android:id="@+id/thirdPrizePriceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="500"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@id/weirdIconThirdPrizeIc"
+                        app:layout_constraintEnd_toStartOf="@id/weirdIconThirdPrizeIc"
+                        app:layout_constraintTop_toTopOf="@id/weirdIconThirdPrizeIc" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/trophyIc4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_trophy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/fourthPrizeHeadingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="4th Prize"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/trophyIc4"
+                        app:layout_constraintStart_toEndOf="@id/trophyIc4"
+                        app:layout_constraintTop_toTopOf="@id/trophyIc4" />
+
+                    <ImageView
+                        android:id="@+id/weirdIconFourthPrizeIc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/group_1208"
+                        app:layout_constraintBottom_toBottomOf="@id/fourthPrizeHeadingTv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/fourthPrizeHeadingTv" />
+
+                    <TextView
+                        android:id="@+id/fourthPrizePriceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="100"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@id/weirdIconFourthPrizeIc"
+                        app:layout_constraintEnd_toStartOf="@id/weirdIconFourthPrizeIc"
+                        app:layout_constraintTop_toTopOf="@id/weirdIconFourthPrizeIc" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/trophyIc5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_trophy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/fifthPrizeHeadingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="5th Prize"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/trophyIc5"
+                        app:layout_constraintStart_toEndOf="@id/trophyIc5"
+                        app:layout_constraintTop_toTopOf="@id/trophyIc5" />
+
+                    <ImageView
+                        android:id="@+id/weirdIconFifthPrizeIc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/group_1208"
+                        app:layout_constraintBottom_toBottomOf="@id/fifthPrizeHeadingTv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/fifthPrizeHeadingTv" />
+
+                    <TextView
+                        android:id="@+id/fifthPrizePriceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="100"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@id/weirdIconFifthPrizeIc"
+                        app:layout_constraintEnd_toStartOf="@id/weirdIconFifthPrizeIc"
+                        app:layout_constraintTop_toTopOf="@id/weirdIconFifthPrizeIc" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/roundsAndScheduleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="Rounds and Schedule"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/tournamentCv"
+            app:layout_constraintTop_toBottomOf="@id/tournamentCv" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/roundsAndScheduleCv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/green"
+            app:layout_constraintStart_toStartOf="@id/roundsAndScheduleTv"
+            app:layout_constraintTop_toBottomOf="@id/roundsAndScheduleTv">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow android:background="@drawable/gradient_green_background">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="@string/rounds"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Round type"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Promotions"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Qualifiers"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Single Elimination"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Top 4 from every group"
+                        android:textColor="@color/white" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Quarter Finals"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Single Elimination"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Top 4 from every group"
+                        android:textColor="@color/white" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Semi-Final"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Single Elimination"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Top 4 of all"
+                        android:textColor="@color/white" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Final"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Single Elimination"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Winner"
+                        android:textColor="@color/white" />
+                </TableRow>
+            </TableLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/joinMatchTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="8dp"
+            android:text="How to Join a Match"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/roundsAndScheduleCv" />
+
+        <TextView
+            android:id="@+id/rule1Tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/grey"
+            android:text="• Have your game open already and on the latest version"
+            app:layout_constraintStart_toStartOf="@id/joinMatchTv"
+            app:layout_constraintTop_toBottomOf="@id/joinMatchTv" />
+
+        <TextView
+            android:id="@+id/rule2Tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:textColor="@color/grey"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:text="• Once the match is configured you will receive an invite in-game to join the lobby."
+
+            app:layout_constraintStart_toStartOf="@id/rule1Tv"
+            app:layout_constraintTop_toBottomOf="@id/rule1Tv" />
+
+        <TextView
+            android:id="@+id/rule3Tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:textColor="@color/grey"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:text="• Join the match and wait for the game to start."
+            app:layout_constraintStart_toStartOf="@id/rule2Tv"
+            app:layout_constraintTop_toBottomOf="@id/rule2Tv" />
+
+        <TextView
+            android:id="@+id/rule4Tv"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="16dp"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:paddingTop="8dp"
+            android:text="@string/when_eliminated_return_to_the_match_room_page_to_be_ready_to_join_the_next_map_in_the_round"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toStartOf="@id/rule3Tv"
+            app:layout_constraintTop_toBottomOf="@id/rule3Tv" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/organiserDetailsCv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/green"
+            app:layout_constraintStart_toStartOf="@id/rule4Tv"
+            app:layout_constraintTop_toBottomOf="@id/rule4Tv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/organiserDetailsLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/gradient_green_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="12dp"
+                        android:text="Organiser’s Details and contact"
+                        android:textColor="@color/textgrey"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/organizerLogoIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/group_1208"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/organiserDetailsLl" />
+
+                <TextView
+                    android:id="@+id/organiserNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/gamehok_esports"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/organizerLogoIv"
+                    app:layout_constraintStart_toEndOf="@id/organizerLogoIv"
+                    app:layout_constraintTop_toTopOf="@id/organizerLogoIv" />
+
+                <TextView
+                    android:id="@+id/descriptionTv"
+                    app:layout_constraintStart_toStartOf="@id/organizerLogoIv"
+                    app:layout_constraintTop_toBottomOf="@id/organizerLogoIv"
+                    android:text="@string/this_is_the_in_house_organiser_of_this_platform_you_can_follow_our_page_on_this_platform_for_regular_updates"
+                    android:layout_width="250dp"
+                    android:textColor="@color/grey"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/followCv"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintTop_toTopOf="@id/organiserNameTv"
+                    app:layout_constraintBottom_toBottomOf="@id/organiserNameTv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/green3"
+                    app:strokeWidth="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingVertical="9dp"
+                        android:paddingHorizontal="18dp"
+                        android:id="@+id/followTv"
+                        android:text="@string/follow"
+                        android:textSize="12sp"
+                        android:textColor="@color/textgrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:id="@+id/phoneIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="@id/descriptionTv"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionTv"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/phoneText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9890987754"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/phoneIcon"
+                    app:layout_constraintTop_toTopOf="@id/phoneIcon"
+                    app:layout_constraintBottom_toBottomOf="@id/phoneIcon"
+                    android:layout_marginStart="8dp"/>
+
+                <!-- Email Contact -->
+
+                <ImageView
+                    android:id="@+id/emailIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@id/emailText"
+                    app:layout_constraintEnd_toStartOf="@id/emailText"
+                    app:layout_constraintTop_toTopOf="@id/emailText"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/emailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Support@gamehok.com"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/phoneText"
+                    app:layout_constraintBottom_toBottomOf="@id/phoneText"
+                    android:layout_marginStart="8dp"/>
+
+                <!-- WhatsApp Contact -->
+                <ImageView
+                    android:id="@+id/whatsappIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_whatsapp"
+                    android:paddingVertical="16dp"
+                    app:layout_constraintStart_toStartOf="@id/phoneIcon"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneText"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/whatsappText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_9890987754"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/phoneText"
+                    app:layout_constraintTop_toTopOf="@id/whatsappIcon"
+                    app:layout_constraintBottom_toBottomOf="@id/whatsappIcon" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <TextView
+            android:id="@+id/moreTorunamentsHeadingTv"
+            android:textStyle="bold"
+            android:textColor="@color/textgrey"
+            android:text="@string/more_tournaments_for_you"
+            android:textSize="18sp"
+            android:layout_marginStart="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/organiserDetailsCv"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintStart_toStartOf="@id/moreTorunamentsHeadingTv"
+            app:layout_constraintTop_toBottomOf="@id/moreTorunamentsHeadingTv"
+            android:orientation="horizontal"
+            android:id="@+id/moreTournamentsRv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/battle_item"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="64dp"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
